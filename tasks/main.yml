@@ -1,0 +1,14 @@
+- name: install httpd
+  yum: name=httpd
+- name: enable prod mode for secure response
+  lineinfile: dest={{ httpd_conf_path }} line='ServerTokens Prod' backup=yes
+- name: disable create index
+  lineinfile: dest={{ httpd_conf_path }} regexp='^ *Options Indexes' line='Options -Indexes FollowSymLinks' backrefs=yes backup=yes
+- stat: path={{ welcome_conf_path }}
+  register: welcome_conf
+- block:
+  - name: backup welcome.conf
+    copy: src={{ welcome_conf_path }} dest={{ welcome_conf_path }}.ori remote_src=yes
+  - name: delete welcome.conf
+    file: path={{ welcome_conf_path }} state=absent
+  when: welcome_conf.stat.exists
