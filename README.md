@@ -2,11 +2,11 @@ Install httpd
 =========
 
 Install httpd and setup below.
-* Reduce infomation in response
+* Reduce infomation in response  
 Add the line "ServerTokens Prod"
-* Disable directory listing
+* Disable directory listing  
 Delete "Options Indexes"
-* Disable welcome page
+* Disable welcome page  
 Delete welcome.conf
 
 Requirements
