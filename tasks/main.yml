@@ -1,8 +1,8 @@
 - name: install httpd
   yum: name=httpd
-- name: enable prod mode for secure response
+- name: reduce infomation in response
   lineinfile: dest={{ httpd_conf_path }} line='ServerTokens Prod' backup=yes
-- name: disable create index
+- name: disable directory listing
   lineinfile: dest={{ httpd_conf_path }} regexp='^ *Options Indexes FollowSymLinks' line='Options FollowSymLinks' backrefs=yes backup=yes
 - stat: path={{ welcome_conf_path }}
   register: welcome_conf
