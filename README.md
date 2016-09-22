@@ -9,6 +9,8 @@ Delete "Options Indexes"
 * Disable welcome page  
 Delete welcome.conf
 
+Note: This setting was tested in version 2.4.6 of httpd.
+
 Requirements
 ------------
 
