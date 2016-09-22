@@ -1,6 +1,6 @@
 galaxy_info:
   author: Toshiyuki Imaizumi
-  description: your description
+  description: install httpd and setup secure
   #company: your company (optional)
 
   license: BSD
@@ -12,6 +12,8 @@ galaxy_info:
     versions:
     - 7
 
-  galaxy_tags: []
+  galaxy_tags: 
+    - system
+    - httpd
 
 dependencies: []

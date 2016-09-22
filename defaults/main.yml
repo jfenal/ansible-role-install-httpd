@@ -1,0 +1,2 @@
+# switch httpd sertice enabled/disabled
+httpd_service_enabled: yes

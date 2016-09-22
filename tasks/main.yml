@@ -12,3 +12,5 @@
   - name: delete welcome.conf
     file: path={{ welcome_conf_path }} state=absent
   when: welcome_conf.stat.exists
+- name: enable httpd service
+  service: name=httpd enabled={{ httpd_service_enabled }}
