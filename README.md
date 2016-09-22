@@ -2,6 +2,7 @@ Install httpd
 =========
 
 Install httpd and setup below.
+
 * Reduce infomation in response  
 Add the line "ServerTokens Prod"
 * Disable directory listing  
